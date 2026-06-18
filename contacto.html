@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a Energy Life Triatlon para unirte, solicitar informacion o proponer patrocinio.">
+  <title>Contacto | Energy Life Triatlon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegacion principal">
+      <a class="brand" href="index.html"><span class="brand-mark"><img src="images/log.png" alt="Energy Life Triatlon"></span><span class="brand-text">Energy Life <strong>Triatlon</strong></span></a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a class="nav-cta active" href="contacto.html">Unirme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow reveal">
+        <p class="eyebrow">Contacto</p>
+        <h1>Hablemos de tu proxima meta.</h1>
+        <p>Atletas, familias y marcas aliadas: este es el punto de partida para entrenar o construir una alianza con Energy Life.</p>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container contact-grid">
+        <form class="contact-form reveal" novalidate>
+          <!-- Formulario visual preparado para conectarse a un backend o CRM -->
+          <label>Nombre completo<input type="text" name="nombre" placeholder="Tu nombre" required></label>
+          <label>Correo electronico<input type="email" name="email" placeholder="energylifeibague@gmail.com" required></label>
+          <label>Telefono / WhatsApp<input type="tel" name="telefono" placeholder="+57  3184835796" required></label>
+          <label>Interes
+            <select name="interes" required>
+              <option value="">Selecciona una opcion</option>
+              <option>Quiero entrenar</option>
+              <option>Programa juvenil</option>
+              <option>Alto rendimiento</option>
+              <option>Patrocinio / alianza</option>
+            </select>
+          </label>
+          <label>Mensaje<textarea name="mensaje" rows="5" placeholder="Cuentanos tu objetivo deportivo"></textarea></label>
+          <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+          <p class="form-status" role="status"></p>
+        </form>
+
+        <aside class="contact-panel reveal">
+          <p class="eyebrow">Canales directos</p>
+          <h2>Resolvemos rapido, entrenamos mejor.</h2>
+          <div class="contact-links">
+            <a href="https://wa.me/573184835796"><span>WhatsApp</span><strong>+57 318 483 5796</strong></a>
+            <a href="mailto:energylifeibague@gmail.com"><span>Email</span><strong>energylifeibague@gmail.com</strong></a>
+            <a href="#"><span>Instagram</span><strong>@energylifetriatlon</strong></a>
+          </div>
+          <div class="map-card">
+            <span>Ubicacion base</span>
+            <strong>Unidad Deportiva Central</strong>
+            <p>Piscina olimpica, velodromo y pista atletica. Entrenamientos semanales en ciudad y ruta.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="index.html"><span class="brand-mark"><img src="images/log.png" alt="Energy Life Triatlon"></span><span class="brand-text">Energy Life <strong>Triatlon</strong></span></a><p>Club de triatlon para atletas que entrenan con proposito.</p></div>
+      <div><strong>Contacto</strong><a href="mailto:energylifeibague@gmail.com">energylifeibague@gmail.com</a><a href="https://wa.me/573184835796">WhatsApp +57 318 483 5796</a></div>
+      <div><strong>Redes</strong><a href="https://www.instagram.com/energy_life_triatlon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a><a href="https://www.facebook.com/energylifeibague">Facebook</a><a href="https://www.youtube.com/@JuliethArboledaMachado">YouTube</a></div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
