@@ -975,6 +975,48 @@ h3 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    .team-grid-large{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+    margin-top:40px;
+}
+
+.coach-profile{
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:40px;
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+    border-radius:24px;
+    overflow:hidden;
+    padding:24px;
+}
+
+.coach-profile img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.coach-info h3{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.coach-info span{
+    display:block;
+    color:#4da6ff;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.coach-info p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
 }
 }
 

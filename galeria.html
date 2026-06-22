@@ -35,16 +35,126 @@
       </div>
     </section>
 
+    <!--
+      ============================================================
+      COMO AGREGAR IMAGENES NUEVAS
+      ============================================================
+      1. Sube tu imagen a la carpeta /images.
+      2. Copia un bloque <button class="gallery-item ..."> completo
+         dentro de la seccion que quieras (ej: Competencia Abril).
+      3. Cambia:
+         - src de la imagen (dos veces: en data-lightbox y en <img src>)
+         - alt (descripcion de la imagen, para accesibilidad)
+         - data-title (titulo que aparece en el lightbox)
+         - el texto dentro de <span>...</span> (titulo visible en la tarjeta)
+      4. Clases opcionales para variar el tamano de la tarjeta:
+         - sin clase extra  -> tamano normal
+         - clase "tall"     -> tarjeta mas alta
+         - clase "wide"     -> tarjeta mas ancha
+      ============================================================
+    -->
+
+    <!-- ================= SECCION: COMPETENCIA ABRIL ================= -->
     <section class="section">
-      <div class="container gallery-grid">
-        <button class="gallery-item reveal" type="button" data-lightbox="images/gallery-swim.svg" data-title="Aguas abiertas"><img src="images/gallery-swim.svg" alt="Atletas nadando en aguas abiertas"><span>Aguas abiertas</span></button>
-        <button class="gallery-item tall reveal" type="button" data-lightbox="images/gallery-bike.svg" data-title="Ruta electrica"><img src="images/gallery-bike.svg" alt="Ciclistas de triatlon en ruta"><span>Ruta electrica</span></button>
-        <button class="gallery-item reveal" type="button" data-lightbox="images/gallery-run.svg" data-title="Carrera nocturna"><img src="images/gallery-run.svg" alt="Atletas corriendo al amanecer"><span>Carrera nocturna</span></button>
-        <button class="gallery-item wide reveal" type="button" data-lightbox="images/gallery-team.svg" data-title="Equipo Energy Life"><img src="images/equipo trabajo.jpeg" alt="Equipo Energy Life Triatlon reunido"><span>Equipo Energy Life</span></button>
-        <button class="gallery-item reveal" type="button" data-lightbox="images/gallery-transition.svg" data-title="Zona de transicion"><img src="images/gallery-transition.svg" alt="Zona de transicion en competencia"><span>Zona de transicion</span></button>
-        <button class="gallery-item reveal" type="button" data-lightbox="images/gallery-podium.svg" data-title="Podio del club"><img src="images/trayectoria 1.png" alt="Atletas celebrando resultados en podio"><span>Podio del club</span></button>
+      <div class="container">
+        <h2 class="section-title reveal">Competencias</h2>
+        <div class="gallery-grid">
+
+          <button class="gallery-item wide reveal" type="button" data-lightbox="images/opita equipo.jpeg" data-title="podio">
+            <img src="images/opita equipo.jpeg" alt="Atletas nadando en aguas abiertas">
+            <span>Equipo Seleccion Tolima</span>
+          </button>
+
+          <button class="gallery-item reveal" type="button" data-lightbox="images/opita equipo 3.jpeg" data-title="equipo energylife">
+            <img src="images/opita equipo 3.jpeg" alt="Ciclistas de triatlon en ruta">
+            <span>equipo energylife</span>
+          </button>
+
+          <button class="gallery-item reveal" type="button" data-lightbox="images/leyenda tri.jpeg" data-title="leyenda tri">
+            <img src="images/leyenda tri.jpeg" alt="Atletas corriendo al amanecer">
+            <span>leyenda tri</span>
+          </button>
+
+          <!-- AGREGA AQUI NUEVAS IMAGENES DE "COMPETENCIA ABRIL" -->
+
+        </div>
       </div>
     </section>
+
+    <!-- ================= SECCION: ENTRENAMIENTOS ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Entrenamientos</h2>
+        <div class="gallery-grid">
+
+          <button class="gallery-item reveal" type="button" data-lightbox="images/entrenamiento bici (3).jpeg" data-title="Zona de transicion">
+            <img src="images/entrenamiento bici (3).jpeg" alt="Zona de transicion en competencia">
+            <span>Zona de transicion</span>
+          </button> 
+
+          <button class="gallery-item reveal" type="button" data-lightbox="images/entrenamiento (3).jpeg" data-title="entrenamiento">
+            <img src="images/entrenamiento (3).jpeg" alt="Zona de transicion en competencia">
+            <span>entrenamiento</span>
+          </button>
+
+          <button class="gallery-item reveal" type="button" data-lightbox="images/entrenamiento prado.jpeg" data-title="prado">
+            <img src="images/entrenamiento prado.jpeg" alt="Zona de transicion en competencia">
+            <span>prado</span>
+          </button>
+
+          <!-- AGREGA AQUI NUEVAS IMAGENES DE "ENTRENAMIENTOS" -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCION: INTEGRACIONES ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Integraciones</h2>
+        <div class="gallery-grid">
+
+          <button class="gallery-item wide reveal" type="button" data-lightbox="images/integracion.jpeg" data-title="Equipo Energy Life">
+            <img src="images/trayectoria.png" alt="Equipo Energy Life Triatlon reunido">
+            <span>Equipo Energy Life</span>
+          </button>
+
+          <button class="gallery-item wide reveal" type="button" data-lightbox="images/integracion (2).jpeg" data-title="Equipo Energy Life">
+            <img src="images/integracion (2).jpeg" alt="Equipo Energy Life Triatlon reunido">
+            <span>Equipo Energy Life</span>
+          </button>
+          <!-- AGREGA AQUI NUEVAS IMAGENES DE "INTEGRACIONES" -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECCION: PODIOS Y LOGROS ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Podios y logros</h2>
+        <div class="gallery-grid">
+
+          <button class="gallery-item reveal" type="button" data-lightbox="images/opita (2).jpeg" data-title="Podio del club">
+            <img src="images/opita (2).jpeg" alt="Atletas celebrando resultados en podio">
+            <span>Podio del club</span>
+          </button>
+
+          <!-- AGREGA AQUI NUEVAS IMAGENES DE "PODIOS Y LOGROS" -->
+
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ============================================================
+      PARA CREAR UNA SECCION NUEVA (ej: "Viajes del club"):
+      Copia un bloque <section class="section">...</section> completo,
+      cambia el texto de <h2 class="section-title"> y reemplaza
+      los gallery-item de adentro por los tuyos.
+      ============================================================
+    -->
+
   </main>
 
   <div class="lightbox" aria-hidden="true">
