@@ -120,6 +120,7 @@ select {
   padding: 0;
   margin: 0;
   list-style: none;
+  background: transparent;
 }
 
 .nav-menu a {
@@ -137,7 +138,7 @@ select {
 .nav-menu a:hover,
 .nav-menu a.active {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(7, 17, 31, 0.98);
   transform: translateY(-1px);
 }
 
@@ -221,6 +222,16 @@ h1 {
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
+}
+
+/* Banner principal: degradado azul -> rojo sobre "ENERGY LIFE TRIATLON" */
+.hero-content h1 {
+  background: linear-gradient(120deg, var(--electric) 0%, var(--electric-2) 35%, var(--red) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 8px 30px rgba(255, 45, 85, 0.25));
 }
 
 h2 {
@@ -500,11 +511,13 @@ h3 {
 }
 
 .page-hero {
+  position: relative;
   padding: 170px 0 90px;
   background:
     linear-gradient(135deg, rgba(0, 167, 255, 0.16), transparent 42%),
     radial-gradient(circle at 80% 20%, rgba(199, 255, 53, 0.12), transparent 32%);
   border-bottom: 1px solid var(--line);
+  overflow: hidden;
 }
 
 .page-hero.compact {
@@ -812,6 +825,50 @@ h3 {
   transform: translateY(0);
 }
 
+.team-grid-large {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.coach-profile {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.coach-profile img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.coach-info h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.coach-info span {
+  display: block;
+  color: #4da6ff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.coach-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ===================== MOBILE NAV (≤920px) ===================== */
+/* Una sola fuente de verdad para el menú móvil: fondo 100% sólido,
+   z-index por encima del header y animación de slide-in. */
 @media (max-width: 920px) {
   .nav-toggle {
     display: block;
@@ -821,11 +878,12 @@ h3 {
   .nav-menu {
     position: fixed;
     inset: 82px 0 0;
+    z-index: 999;
     display: grid;
     align-content: start;
     gap: 8px;
     padding: 24px;
-    background: rgba(5, 7, 13, 0.96);
+    background: #07111f; /* sólido, sin transparencia */
     transform: translateX(100%);
     transition: transform 0.28s ease;
   }
@@ -850,6 +908,7 @@ h3 {
     width: 100%;
     min-height: 52px;
     justify-content: center;
+    font-size: 1.1rem;
   }
 
   .stats-grid,
@@ -877,6 +936,10 @@ h3 {
   }
 
   .event-card {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-profile {
     grid-template-columns: 1fr;
   }
 }
@@ -936,87 +999,45 @@ h3 {
   .btn {
     width: 100%;
   }
-  .page-hero{
-    position: relative;
-    overflow: hidden;
-}
 
-.page-hero-image{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    z-index: 1;
-
-    opacity: 0.3; /* ajusta entre 0.2 y 0.5 */
-}
-
-.page-hero-grid{
-    position: relative;
-    z-index: 2;
-    grid-template-columns: 1fr;
-}
-.page-hero h1{
-    font-size: clamp(2rem, 5vw, 4rem);
-    max-width: 700px;
-}
-
-.page-hero p{
-    font-size: 1rem;
-    max-width: 600px;
-}
-.page-hero{
-    background-image: url("../images/trayectoria 2.png");
+  /* Hero de páginas internas con imagen de fondo en mobile */
+  .page-hero {
+    background-image: url("./images/trayectoria 2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    .team-grid-large{
-    display:flex;
-    flex-direction:column;
-    gap:50px;
-    margin-top:40px;
+  }
+
+  .page-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.3; /* ajusta entre 0.2 y 0.5 */
+  }
+
+  .page-hero-grid {
+    position: relative;
+    z-index: 2;
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    max-width: 700px;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+    max-width: 600px;
+  }
 }
 
-.coach-profile{
-    display:grid;
-    grid-template-columns:350px 1fr;
-    gap:40px;
-    align-items:center;
-
-    background:rgba(255,255,255,.05);
-    border-radius:24px;
-    overflow:hidden;
-    padding:24px;
+@media (max-width: 768px) {
+  .nav-menu a {
+    font-size: 1.3rem;
+  }
 }
-
-.coach-profile img{
-    width:100%;
-    height:450px;
-    object-fit:cover;
-    border-radius:18px;
-}
-
-.coach-info h3{
-    font-size:2rem;
-    margin-bottom:10px;
-}
-
-.coach-info span{
-    display:block;
-    color:#4da6ff;
-    font-weight:600;
-    margin-bottom:20px;
-}
-
-.coach-info p{
-    font-size:1.1rem;
-    line-height:1.8;
-}
-}
-}
-
